@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Project Intelligence | Project Sentinel
+    </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+        /* ==================================================
+           RESET
+        ================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background:
+                #f4f7fb;
+
+            color:
+                #10213a;
+
+            line-height:
+                1.5;
+        }
+
+
+
+        /* ==================================================
+           PAGE
+        ================================================== */
+
+        .page-shell {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .page-container {
+            width: min(1500px, calc(100% - 48px));
+            margin: 0 auto;
+            padding: 32px 0 60px;
+        }
+
+
+
+        /* ==================================================
+           TOP BAR
+        ================================================== */
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            margin-bottom: 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: #1d5fe9;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .topbar-label {
+            color: #718096;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+
+
+        /* ==================================================
+           HERO
+        ================================================== */
+
+        .project-hero {
+            background: #ffffff;
+            border: 1px solid #e1e8f0;
+            border-radius: 18px;
+
+            padding: 30px 32px;
+
+            box-shadow:
+                0 8px 28px rgba(20, 43, 77, 0.06);
+
+            margin-bottom: 22px;
+        }
+
+        .hero-layout {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            color: #1d5fe9;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-size: clamp(26px, 3vw, 38px);
+            line-height: 1.15;
+
+            color: #10213a;
+
+            margin-bottom: 10px;
+        }
+
+        .project-info {
+            color: #66758a;
+            font-size: 14px;
+        }
+
+        .project-status-badge {
+            flex-shrink: 0;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 10px 15px;
+
+            border-radius: 999px;
+
+            background: #fff4d6;
+            color: #9a6700;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+
+            border: 1px solid #f3dfaa;
+        }
+
+
+
+        /* ==================================================
+           KPI GRID
+        ================================================== */
+
+        .intelligence-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 18px;
+
+            margin-bottom: 22px;
+        }
+
+        .intelligence-card {
+            position: relative;
+
+            background: #ffffff;
+
+            border: 1px solid #e1e8f0;
+            border-radius: 16px;
+
+            padding: 22px 22px 38px;
+
+            min-height: 145px;
+
+            box-shadow:
+                0 6px 22px rgba(20, 43, 77, 0.05);
+
+            cursor: pointer;
+
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease;
+        }
+
+        .intelligence-card:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 30px rgba(20, 43, 77, 0.09);
+        }
+
+        .intelligence-card::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 5px;
+            height: 100%;
+
+            background: #2867e8;
+
+            border-radius:
+                16px 0 0 16px;
+        }
+
+        /* Subtle drill-down arrow */
+        .intelligence-card::after {
+            content: "→";
+
+            position: absolute;
+            right: 18px;
+            bottom: 13px;
+
+            color: #9aaabd;
+
+            font-size: 20px;
+            font-weight: 700;
+
+            opacity: 0.45;
+
+            transition:
+                opacity 0.18s ease,
+                transform 0.18s ease;
+        }
+
+        .intelligence-card:hover::after {
+            opacity: 0.95;
+            transform: translateX(3px);
+        }
+
+        .card-label {
+            color: #718096;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        .card-value {
+            color: #10213a;
+
+            font-size: 31px;
+            font-weight: 800;
+
+            line-height: 1.1;
+
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            color: #718096;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ==================================================
+           PANELS
+        ================================================== */
+
+        .panel {
+            background: #ffffff;
+
+            border: 1px solid #e1e8f0;
+            border-radius: 18px;
+
+            padding: 26px;
+
+            box-shadow:
+                0 7px 25px rgba(20, 43, 77, 0.05);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .panel-eyebrow {
+            color: #1d5fe9;
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+
+            margin-bottom: 6px;
+        }
+
+        .panel-title {
+            color: #10213a;
+
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .panel-subtitle {
+            color: #718096;
+
+            font-size: 13px;
+
+            margin-top: 5px;
+        }
+
+        .panel-tag {
+            flex-shrink: 0;
+
+            padding: 8px 12px;
+
+            border-radius: 8px;
+
+            background: #f1f5fb;
+            color: #315277;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+
+
+        /* ==================================================
+           EXECUTIVE SUMMARY
+        ================================================== */
+
+        .summary-panel {
+            margin-bottom: 22px;
+        }
+
+        .risk-summary {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            padding: 20px;
+
+            background: #f8fafc;
+
+            border: 1px solid #dce5ef;
+            border-radius: 13px;
+        }
+
+        .risk-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #fff0bf;
+            color: #8c6200;
+
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .risk-summary h3 {
+            color: #10213a;
+
+            font-size: 17px;
+            font-weight: 800;
+
+            margin-bottom: 4px;
+        }
+
+        .risk-summary p {
+            color: #59708e;
+
+            font-size: 14px;
+        }
+
+
+
+        /* ==================================================
+           INTELLIGENCE GRID
+        ================================================== */
+
+        .intelligence-section {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(0, 0.95fr);
+
+            gap: 22px;
+
+            margin-bottom: 22px;
+        }
+
+        .intelligence-section > .panel {
+            min-width: 0;
+            height: 100%;
+        }
+
+
+
+        /* ==================================================
+           EXPLAINABILITY
+        ================================================== */
+
+        .driver-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .driver-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 13px;
+
+            padding: 15px;
+
+            background: #f8fafc;
+
+            border: 1px solid #e0e7ef;
+            border-radius: 12px;
+        }
+
+        .driver-number {
+            width: 31px;
+            height: 31px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            background: #edf4ff;
+            color: #1d5fe9;
+
+            font-size: 11px;
+            font-weight: 900;
+        }
+
+        .driver-content strong {
+            display: block;
+
+            color: #14263f;
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
+        }
+
+        .driver-content p {
+            color: #64748b;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ==================================================
+           EARLY WARNING
+        ================================================== */
+
+        .warning-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .warning-item {
+            display: grid;
+            gap: 9px;
+        }
+
+        .warning-label-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+
+            color: #5f7087;
+
+            font-size: 13px;
+        }
+
+        .warning-label-row strong {
+            color: #172941;
+
+            font-size: 14px;
+        }
+
+        .risk-progress {
+            width: 100%;
+            height: 10px;
+
+            overflow: hidden;
+
+            background: #e7edf5;
+
+            border-radius: 999px;
+        }
+
+        .risk-progress-fill {
+            width: 0;
+            height: 100%;
+
+            background: #2867e8;
+
+            border-radius: inherit;
+
+            transition: width 0.5s ease;
+        }
+
+        .prediction-note {
+            margin-top: 22px;
+
+            padding: 13px 15px;
+
+            background: #f5f8fc;
+
+            border: 1px solid #e0e7ef;
+            border-radius: 10px;
+
+            color: #65768c;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ==================================================
+           RECOMMENDATION
+        ================================================== */
+
+        .recommendation-panel {
+            margin-bottom: 22px;
+        }
+
+        .recommendation-box {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f5f8ff,
+                    #f9fbfd
+                );
+
+            border: 1px solid #dce6f3;
+            border-radius: 13px;
+        }
+
+        .recommendation-icon {
+            width: 46px;
+            height: 46px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #e8f0ff;
+            color: #1d5fe9;
+
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .recommendation-box strong {
+            display: block;
+
+            color: #172941;
+
+            font-size: 15px;
+
+            margin-bottom: 4px;
+        }
+
+        .recommendation-box p {
+            color: #5f7087;
+
+            font-size: 13px;
+        }
+
+
+
+        /* ==================================================
+           PERFORMANCE GRID
+        ================================================== */
+
+        .performance-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(0, 0.95fr);
+
+            gap: 22px;
+
+            margin-bottom: 22px;
+        }
+
+        .performance-grid > .panel {
+            min-width: 0;
+        }
+
+        .metric-list {
+            display: grid;
+            gap: 13px;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-name {
+            color: #68798f;
+
+            font-size: 13px;
+        }
+
+        .metric-value {
+            color: #14263f;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            text-align: right;
+        }
+
+
+
+        /* ==================================================
+           FRAMEWORK
+        ================================================== */
+
+        .framework-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 12px;
+        }
+
+        .framework-list > div {
+            position: relative;
+
+            padding: 16px 16px 34px;
+
+            background: #f8fafc;
+
+            border: 1px solid #e0e7ef;
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            transition:
+                border-color 0.18s ease,
+                transform 0.18s ease,
+                box-shadow 0.18s ease;
+        }
+
+        .framework-list > div:hover {
+            border-color: #a8c1ed;
+            transform: translateY(-1px);
+
+            box-shadow:
+                0 7px 18px rgba(20, 43, 77, 0.06);
+        }
+
+        /* Subtle drill-down arrow */
+        .framework-list > div::after {
+            content: "→";
+
+            position: absolute;
+            right: 14px;
+            bottom: 10px;
+
+            color: #9aaabd;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            opacity: 0.42;
+
+            transition:
+                opacity 0.18s ease,
+                transform 0.18s ease;
+        }
+
+        .framework-list > div:hover::after {
+            opacity: 0.95;
+            transform: translateX(3px);
+        }
+
+        .framework-number {
+            color: #1d5fe9;
+
+            font-size: 11px;
+            font-weight: 900;
+
+            margin-bottom: 5px;
+        }
+
+        .framework-title {
+            color: #14263f;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .framework-description {
+            color: #718096;
+
+            font-size: 11px;
+
+            margin-top: 3px;
+        }
+
+
+
+        /* ==================================================
+           CLICKABLE DRILL-DOWN PANELS
+        ================================================== */
+
+        .clickable-detail-panel {
+            position: relative;
+
+            cursor: pointer;
+
+            padding-bottom: 42px;
+
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease,
+                border-color 0.18s ease;
+        }
+
+        .clickable-detail-panel:hover {
+            transform: translateY(-1px);
+
+            border-color: #d2deed;
+
+            box-shadow:
+                0 11px 30px rgba(20, 43, 77, 0.08);
+        }
+
+        /* Subtle drill-down arrow */
+        .clickable-detail-panel::after {
+            content: "→";
+
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+
+            color: #9aaabd;
+
+            font-size: 20px;
+            font-weight: 700;
+
+            opacity: 0.42;
+
+            transition:
+                opacity 0.18s ease,
+                transform 0.18s ease;
+        }
+
+        .clickable-detail-panel:hover::after {
+            opacity: 0.95;
+            transform: translateX(3px);
+        }
+
+
+
+        /* ==================================================
+           CHART
+        ================================================== */
+
+        .chart-panel {
+            margin-bottom: 22px;
+        }
+
+        .chart-container {
+            position: relative;
+
+            width: 100%;
+            height: 330px;
+        }
+
+
+
+        /* ==================================================
+           FOOTER NOTE
+        ================================================== */
+
+        .monitoring-note {
+            padding: 16px 18px;
+
+            border-radius: 12px;
+
+            background: #f7f9fc;
+
+            border: 1px solid #e2e8f0;
+
+            color: #718096;
+
+            font-size: 12px;
+
+            margin-top: 22px;
+        }
+
+
+
+        /* ==================================================
+           CLICKABLE
+        ================================================== */
+
+        .clickable-card,
+        .clickable-detail-panel,
+        .clickable-framework {
+            cursor: pointer;
+        }
+
+
+
+        /* ==================================================
+           MODAL
+        ================================================== */
+
+        .detail-modal-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            background:
+                rgba(10, 24, 43, 0.58);
+
+            backdrop-filter:
+                blur(5px);
+        }
+
+        .detail-modal {
+            width: min(760px, 100%);
+
+            max-height: 88vh;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 25px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .detail-modal-header {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 20px 24px;
+
+            border-bottom: 1px solid #e6ebf1;
+        }
+
+        .detail-modal-header .eyebrow {
+            margin-bottom: 3px;
+        }
+
+        .detail-modal-header h2 {
+            font-size: 21px;
+            color: #10213a;
+        }
+
+        .detail-modal-close {
+            width: 36px;
+            height: 36px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #f1f4f8;
+
+            color: #4d6078;
+
+            font-size: 23px;
+
+            cursor: pointer;
+        }
+
+        .detail-modal-body {
+            padding: 24px;
+
+            max-height: calc(88vh - 90px);
+
+            overflow-y: auto;
+        }
+
+        .detail-intro {
+            color: #63758b;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .detail-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 12px;
+        }
+
+        .detail-metric {
+            padding: 15px;
+
+            background: #f7f9fc;
+
+            border: 1px solid #e1e8f0;
+
+            border-radius: 11px;
+        }
+
+        .detail-metric span {
+            display: block;
+
+            color: #718096;
+
+            font-size: 11px;
+
+            margin-bottom: 4px;
+        }
+
+        .detail-metric strong {
+            color: #14263f;
+
+            font-size: 16px;
+        }
+
+        .detail-note {
+            margin-top: 18px;
+
+            padding: 15px;
+
+            background: #f7f9fc;
+
+            border-radius: 11px;
+
+            color: #65768b;
+
+            font-size: 12px;
+        }
+
+        .detail-note strong {
+            display: block;
+
+            color: #24364d;
+
+            margin-bottom: 5px;
+        }
+
+        .explanation-box {
+            padding: 17px;
+
+            background: #f5f8ff;
+
+            border: 1px solid #dce7f8;
+
+            border-radius: 11px;
+
+            color: #334d70;
+
+            font-size: 13px;
+
+            margin-bottom: 18px;
+        }
+
+        .recommendation-detail {
+            display: flex;
+
+            gap: 15px;
+
+            padding: 18px;
+
+            background: #f5f8ff;
+
+            border: 1px solid #dce7f8;
+
+            border-radius: 12px;
+        }
+
+        .recommendation-arrow {
+            color: #1d5fe9;
+
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 1050px) {
+
+            .intelligence-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .intelligence-section,
+            .performance-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+
+        @media (max-width: 700px) {
+
+            .page-container {
+                width: min(100% - 24px, 1500px);
+
+                padding-top: 18px;
+            }
+
+            .hero-layout {
+                flex-direction: column;
+            }
+
+            .project-status-badge {
+                align-self: flex-start;
+            }
+
+            .intelligence-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .framework-list {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .panel,
+            .project-hero {
+                padding: 20px;
+            }
+
+            .clickable-detail-panel {
+                padding-bottom: 40px;
+            }
+
+            .chart-container {
+                height: 270px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+<div class="page-shell">
+
+    <main class="page-container">
+
+
+
+        <!-- ==================================================
+             TOP BAR
+        ================================================== -->
+
+        <div class="topbar">
+
+            <a
+                href="index.html"
+                class="back-link"
+            >
+                ← Back to Project Dashboard
+            </a>
+
+            <span class="topbar-label">
+                Project Sentinel • Decision Support
+            </span>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             PROJECT HERO
+        ================================================== -->
+
+        <section class="project-hero">
+
+            <div class="hero-layout">
+
+                <div>
+
+                    <span class="eyebrow">
+                        PROJECT INTELLIGENCE
+                    </span>
+
+                    <h1
+                        id="projectName"
+                        class="project-title"
+                    >
+                        Loading Project...
+                    </h1>
+
+                    <p
+                        id="projectInfo"
+                        class="project-info"
+                    >
+                        Loading project information...
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="project-status-badge"
+                >
+                    <span>●</span>
+
+                    <span>
+                        PREDICTIVE RISK
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             KPI CARDS
+        ================================================== -->
+
+        <section class="intelligence-grid">
+
+
+
+            <div class="intelligence-card">
+
+                <div class="card-label">
+                    PROJECT HEALTH
+                </div>
+
+                <div
+                    id="healthScore"
+                    class="card-value"
+                >
+                    —
+                </div>
+
+                <div class="card-description">
+                    Composite monitoring score
+                </div>
+
+            </div>
+
+
+
+            <div class="intelligence-card">
+
+                <div class="card-label">
+                    OVERALL PREDICTION RISK
+                </div>
+
+                <div
+                    id="overallRisk"
+                    class="card-value"
+                >
+                    —
+                </div>
+
+                <div class="card-description">
+                    Model-estimated early warning
+                </div>
+
+            </div>
+
+
+
+            <div class="intelligence-card">
+
+                <div class="card-label">
+                    TIME-OVERRUN RISK
+                </div>
+
+                <div
+                    id="timeRisk"
+                    class="card-value"
+                >
+                    —
+                </div>
+
+                <div class="card-description">
+                    Probability of schedule overrun
+                </div>
+
+            </div>
+
+
+
+            <div class="intelligence-card">
+
+                <div class="card-label">
+                    COST-OVERRUN RISK
+                </div>
+
+                <div
+                    id="costRisk"
+                    class="card-value"
+                >
+                    —
+                </div>
+
+                <div class="card-description">
+                    Probability of cost overrun
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             EXECUTIVE RISK SUMMARY
+        ================================================== -->
+
+        <section class="panel summary-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <div class="panel-eyebrow">
+                        EARLY WARNING
+                    </div>
+
+                    <h2 class="panel-title">
+                        Executive Risk Summary
+                    </h2>
+
+                </div>
+
+                <div class="panel-tag">
+                    Predictive Assessment
+                </div>
+
+            </div>
+
+
+
+            <div class="risk-summary">
+
+                <div class="risk-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h3>
+                        Assessing project risk...
+                    </h3>
+
+                    <p id="riskExplanation">
+                        Loading risk assessment...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             EXPLAINABILITY + EARLY WARNING
+        ================================================== -->
+
+        <section class="intelligence-section">
+
+
+
+            <!-- EXPLAINABILITY -->
+
+            <section
+                class="panel clickable-detail-panel"
+                id="explainabilityPanel"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="panel-eyebrow">
+                            EXPLAINABILITY
+                        </div>
+
+                        <h2 class="panel-title">
+                            Why is this project at risk?
+                        </h2>
+
+                        <p class="panel-subtitle">
+                            Key evidence driving the current
+                            project assessment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="driver-list">
+
+
+
+                    <div class="driver-item">
+
+                        <div class="driver-number">
+                            01
+                        </div>
+
+                        <div class="driver-content">
+
+                            <strong>
+                                Progress Performance
+                            </strong>
+
+                            <p id="progressDriver">
+                                Loading progress evidence...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="driver-item">
+
+                        <div class="driver-number">
+                            02
+                        </div>
+
+                        <div class="driver-content">
+
+                            <strong>
+                                Schedule & Milestones
+                            </strong>
+
+                            <p id="milestoneDriver">
+                                Loading milestone evidence...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="driver-item">
+
+                        <div class="driver-number">
+                            03
+                        </div>
+
+                        <div class="driver-content">
+
+                            <strong>
+                                Financial Performance
+                            </strong>
+
+                            <p id="financialDriver">
+                                Loading financial evidence...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- EARLY WARNING -->
+
+            <section
+                class="panel clickable-detail-panel"
+                id="earlyWarningPanel"
+            >
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="panel-eyebrow">
+                            MODEL OUTPUT
+                        </div>
+
+                        <h2 class="panel-title">
+                            Predictive Early Warning
+                        </h2>
+
+                        <p class="panel-subtitle">
+                            Model-estimated probability of
+                            potential project overruns.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="warning-list">
+
+
+
+                    <div class="warning-item">
+
+                        <div class="warning-label-row">
+
+                            <span>
+                                Time-overrun probability
+                            </span>
+
+                            <strong
+                                id="timeRiskSecondary"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+                        <div class="risk-progress">
+
+                            <div
+                                id="timeRiskBar"
+                                class="risk-progress-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="warning-item">
+
+                        <div class="warning-label-row">
+
+                            <span>
+                                Cost-overrun probability
+                            </span>
+
+                            <strong
+                                id="costRiskSecondary"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+                        <div class="risk-progress">
+
+                            <div
+                                id="costRiskBar"
+                                class="risk-progress-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div class="prediction-note">
+
+                    These values represent
+                    <strong>
+                        model-estimated risk probabilities
+                    </strong>
+                    used for early-warning assessment.
+
+                </div>
+
+            </section>
+
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             RECOMMENDED INTERVENTION
+        ================================================== -->
+
+        <section class="panel recommendation-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <div class="panel-eyebrow">
+                        DECISION SUPPORT
+                    </div>
+
+                    <h2 class="panel-title">
+                        Recommended Intervention
+                    </h2>
+
+                    <p class="panel-subtitle">
+                        Suggested review or intervention based
+                        on current predictive signals.
+                    </p>
+
+                </div>
+
+                <div
+                    id="actionTag"
+                    class="panel-tag"
+                >
+                    REVIEW
+                </div>
+
+            </div>
+
+
+
+            <div class="recommendation-box">
+
+                <div class="recommendation-icon">
+                    →
+                </div>
+
+                <div>
+
+                    <strong>
+                        Recommended Action
+                    </strong>
+
+                    <p id="recommendedAction">
+                        Generating recommended intervention...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PERFORMANCE + FRAMEWORK
+        ================================================== -->
+
+        <section class="performance-grid">
+
+
+
+            <!-- PERFORMANCE -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="panel-eyebrow">
+                            CURRENT STATE
+                        </div>
+
+                        <h2 class="panel-title">
+                            Progress Performance
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="performanceStatus"
+                        class="panel-tag"
+                    >
+                        ASSESSING
+                    </div>
+
+                </div>
+
+
+
+                <div class="metric-list">
+
+
+
+                    <div class="metric-row">
+
+                        <span class="metric-name">
+                            Planned Progress
+                        </span>
+
+                        <span
+                            id="plannedProgressValue"
+                            class="metric-value"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="metric-row">
+
+                        <span class="metric-name">
+                            Actual Progress
+                        </span>
+
+                        <span
+                            id="actualProgressValue"
+                            class="metric-value"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="metric-row">
+
+                        <span class="metric-name">
+                            Progress Gap
+                        </span>
+
+                        <span
+                            id="progressGapValue"
+                            class="metric-value"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="metric-row">
+
+                        <span class="metric-name">
+                            Milestones Completed
+                        </span>
+
+                        <span
+                            id="milestoneValue"
+                            class="metric-value"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="metric-row">
+
+                        <span class="metric-name">
+                            Overdue Milestones
+                        </span>
+
+                        <span
+                            id="overdueValue"
+                            class="metric-value"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="metric-row">
+
+                        <span class="metric-name">
+                            Schedule Delay
+                        </span>
+
+                        <span
+                            id="scheduleDelayValue"
+                            class="metric-value"
+                        >
+                            —
+                        </span>
+
+                    </div>
+
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FRAMEWORK -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <div class="panel-eyebrow">
+                            DECISION FLOW
+                        </div>
+
+                        <h2 class="panel-title">
+                            Assessment Framework
+                        </h2>
+
+                        <p class="panel-subtitle">
+                            Monitor → Predict → Explain →
+                            Recommend
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="framework-list">
+
+
+
+                    <div>
+
+                        <div class="framework-number">
+                            01
+                        </div>
+
+                        <div class="framework-title">
+                            Monitor
+                        </div>
+
+                        <div class="framework-description">
+                            Current project condition
+                        </div>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <div class="framework-number">
+                            02
+                        </div>
+
+                        <div class="framework-title">
+                            Predict
+                        </div>
+
+                        <div class="framework-description">
+                            Early-warning risk
+                        </div>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <div class="framework-number">
+                            03
+                        </div>
+
+                        <div class="framework-title">
+                            Explain
+                        </div>
+
+                        <div class="framework-description">
+                            Evidence and risk drivers
+                        </div>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <div class="framework-number">
+                            04
+                        </div>
+
+                        <div class="framework-title">
+                            Recommend
+                        </div>
+
+                        <div class="framework-description">
+                            Suggested intervention
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </section>
+
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PROGRESS TREND
+        ================================================== -->
+
+        <section class="panel chart-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <div class="panel-eyebrow">
+                        PERFORMANCE TREND
+                    </div>
+
+                    <h2 class="panel-title">
+                        Progress Trend
+                    </h2>
+
+                    <p class="panel-subtitle">
+                        Planned versus actual progress across
+                        reporting periods.
+                    </p>
+
+                </div>
+
+                <div class="panel-tag">
+                    Historical View
+                </div>
+
+            </div>
+
+
+
+            <div class="chart-container">
+
+                <canvas id="progressChart"></canvas>
+
+            </div>
+
+
+
+            <div class="monitoring-note">
+
+                <strong>
+                    Monitoring context:
+                </strong>
+
+                Health Score provides a transparent monitoring
+                assessment, while prediction risk provides a
+                separate model-estimated early-warning signal.
+                The prototype uses synthetic/demo project data
+                for demonstration purposes.
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+</div>
+
+
+
+<script src="project.js"></script>
+
+</body>
+
+</html>

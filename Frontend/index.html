@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Sentinel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <div>
+            <h1>Project Sentinel</h1>
+            <p>Predictive Infrastructure Project Monitoring</p>
+        </div>
+
+        <div class="status">
+            ● Monitoring Active
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+
+        <!-- ========================= -->
+        <!-- KPI CARDS -->
+        <!-- ========================= -->
+
+        <section class="kpi-grid">
+
+            <div class="card">
+                <h3>Total Projects</h3>
+                <p id="totalProjects">100</p>
+            </div>
+
+            <div class="card">
+                <h3>High Risk</h3>
+                <p id="highRisk">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Medium Risk</h3>
+                <p id="mediumRisk">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Low Risk</h3>
+                <p id="lowRisk">0</p>
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- CHARTS -->
+        <!-- ========================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- RISK OVERVIEW -->
+
+            <div class="panel">
+
+                <div class="section-title">
+
+                    <div>
+                        <span class="eyebrow">
+                            PORTFOLIO RISK
+                        </span>
+
+                        <h2>
+                            Risk Overview
+                        </h2>
+                    </div>
+
+                    <span
+                        id="riskChartStatus"
+                        class="section-tag">
+                        All Projects
+                    </span>
+
+                </div>
+
+                <canvas id="riskChart"></canvas>
+
+            </div>
+
+
+
+            <!-- PROJECT HEALTH -->
+
+            <div class="panel">
+
+                <div class="section-title">
+
+                    <div>
+                        <span class="eyebrow">
+                            PROJECT CONDITION
+                        </span>
+
+                        <h2>
+                            Project Health
+                        </h2>
+                    </div>
+
+                </div>
+
+                <canvas id="healthChart"></canvas>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- PROJECTS REQUIRING ATTENTION -->
+        <!-- ========================= -->
+
+        <section class="panel">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h2>
+                        Projects Requiring Attention
+                    </h2>
+
+
+                    <!-- SEARCH -->
+
+                    <div class="project-search">
+
+                        <span class="search-icon">
+                            🔎
+                        </span>
+
+                        <input
+                            type="text"
+                            id="projectSearch"
+                            placeholder="Search by project, ID, ministry, state or sector..."
+                            autocomplete="off">
+
+                    </div>
+
+
+                    <!-- FILTERS -->
+
+                    <div class="filters">
+
+
+                        <!-- RISK FILTER -->
+
+                        <select id="riskFilter">
+
+                            <option value="All">
+                                All Risk Levels
+                            </option>
+
+                            <option value="High">
+                                High Risk
+                            </option>
+
+                            <option value="Medium">
+                                Medium Risk
+                            </option>
+
+                            <option value="Low">
+                                Low Risk
+                            </option>
+
+                        </select>
+
+
+
+                        <!-- STATE FILTER -->
+
+                        <select id="stateFilter">
+
+                            <option value="All">
+                                All States
+                            </option>
+
+                        </select>
+
+
+
+                        <!-- SECTOR FILTER -->
+
+                        <select id="sectorFilter">
+
+                            <option value="All">
+                                All Sectors
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                    <p id="tableDescription">
+                        Projects with elevated monitoring risk
+                    </p>
+
+
+                </div>
+
+
+                <!-- VIEW ALL -->
+
+                <button
+                    id="viewAllBtn"
+                    type="button">
+
+                    View All
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- PROJECT TABLE -->
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Project
+                        </th>
+
+                        <th>
+                            Health Score
+                        </th>
+
+                        <th>
+                            Overall Prediction Risk
+                        </th>
+
+                        <th>
+                            Risk Level
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="projectTable">
+
+                </tbody>
+
+
+            </table>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- CHART.JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- DASHBOARD SCRIPT -->
+
+    <script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

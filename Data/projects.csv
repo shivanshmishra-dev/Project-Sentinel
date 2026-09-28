@@ -1,0 +1,101 @@
+project_id,project_name,ministry,sector,state,sanctioned_cost,revised_cost,expenditure,start_date,original_completion_date,revised_completion_date,planned_progress,actual_progress,total_milestones,completed_milestones,overdue_milestones
+PRJ001,Infrastructure Project 001,Ministry of Railways,Railways,Uttar Pradesh,151,248,63.64,2023-11-24,2025-07-30,2025-09-13,87,80,12,3,8
+PRJ002,Infrastructure Project 002,Ministry of Power,Housing,Bihar,1566,1697,988.86,2023-10-15,2025-09-17,2025-08-23,81,47,15,12,2
+PRJ003,Infrastructure Project 003,Ministry of Jal Shakti,Roads,Karnataka,1663,1605,523.72,2023-03-21,2025-03-10,2025-02-15,61,65,11,6,2
+PRJ004,Infrastructure Project 004,Ministry of Housing,Roads,Madhya Pradesh,700,1145,478.07,2023-02-10,2026-01-10,2026-01-03,93,63,19,18,0
+PRJ005,Infrastructure Project 005,Ministry of Railways,Water,Madhya Pradesh,878,840,610.19,2024-03-19,2025-11-12,2026-01-17,57,38,19,11,5
+PRJ006,Infrastructure Project 006,Ministry of Housing,Power,Bihar,877,875,641.71,2023-03-25,2025-11-22,2025-11-15,57,27,15,15,0
+PRJ007,Infrastructure Project 007,Ministry of Jal Shakti,Power,Karnataka,1970,2402,926.44,2023-02-03,2025-01-19,2025-07-02,76,41,23,19,3
+PRJ008,Infrastructure Project 008,Ministry of Road Transport,Power,Karnataka,383,364,120.12,2023-07-05,2025-06-28,2025-06-15,72,51,9,1,2
+PRJ009,Infrastructure Project 009,Ministry of Railways,Power,Uttar Pradesh,1183,1455,1008.56,2023-11-02,2026-07-08,2026-06-29,56,31,8,1,4
+PRJ010,Infrastructure Project 010,Ministry of Housing,Railways,Uttar Pradesh,1125,1116,681.05,2024-05-03,2026-06-11,2026-06-05,88,87,11,11,0
+PRJ011,Infrastructure Project 011,Ministry of Power,Roads,Rajasthan,1100,1095,990.41,2023-11-03,2026-02-11,2026-04-22,41,44,17,10,0
+PRJ012,Infrastructure Project 012,Ministry of Housing,Power,Tamil Nadu,1073,1032,467.33,2023-03-07,2026-05-25,2026-05-04,75,75,21,14,3
+PRJ013,Infrastructure Project 013,Ministry of Road Transport,Roads,Gujarat,560,553,148.25,2023-03-03,2025-03-25,2025-05-24,44,33,25,18,3
+PRJ014,Infrastructure Project 014,Ministry of Road Transport,Roads,Karnataka,587,734,346.21,2023-02-06,2025-11-28,2026-07-24,57,25,25,17,7
+PRJ015,Infrastructure Project 015,Ministry of Railways,Railways,Tamil Nadu,941,926,678.8,2023-07-01,2026-01-19,2026-01-16,69,76,11,1,6
+PRJ016,Infrastructure Project 016,Ministry of Railways,Railways,Karnataka,475,473,201.81,2023-03-13,2025-09-30,2025-11-06,57,38,10,7,0
+PRJ017,Infrastructure Project 017,Ministry of Power,Housing,Karnataka,537,988,473.48,2023-09-06,2026-05-25,2026-04-30,95,80,13,9,0
+PRJ018,Infrastructure Project 018,Ministry of Road Transport,Roads,Tamil Nadu,1455,1415,521.41,2023-12-23,2026-11-26,2026-11-03,85,64,17,10,0
+PRJ019,Infrastructure Project 019,Ministry of Jal Shakti,Railways,Uttar Pradesh,422,419,129.16,2023-09-15,2026-07-24,2027-03-17,43,21,13,4,9
+PRJ020,Infrastructure Project 020,Ministry of Railways,Housing,Tamil Nadu,958,1210,618.54,2023-11-14,2025-06-19,2025-06-11,82,55,18,12,1
+PRJ021,Infrastructure Project 021,Ministry of Railways,Housing,Bihar,119,204,112.92,2023-06-11,2025-01-05,2025-08-01,69,40,11,2,8
+PRJ022,Infrastructure Project 022,Ministry of Railways,Housing,Maharashtra,1807,2306,834.4,2023-03-22,2025-10-25,2026-01-16,74,39,24,14,10
+PRJ023,Infrastructure Project 023,Ministry of Housing,Roads,Maharashtra,1620,1558,713.84,2024-03-31,2025-11-30,2025-11-14,75,76,14,9,1
+PRJ024,Infrastructure Project 024,Ministry of Road Transport,Roads,Maharashtra,1798,1727,453.96,2023-11-21,2026-06-11,2027-02-14,57,65,12,12,0
+PRJ025,Infrastructure Project 025,Ministry of Railways,Railways,Maharashtra,1217,1450,800.49,2024-04-28,2026-02-09,2026-03-31,42,29,12,8,1
+PRJ026,Infrastructure Project 026,Ministry of Road Transport,Railways,Gujarat,1910,1858,1779.52,2023-07-01,2026-06-08,2026-05-11,95,79,12,5,2
+PRJ027,Infrastructure Project 027,Ministry of Housing,Housing,Madhya Pradesh,1742,2027,760.84,2024-02-05,2026-08-14,2026-07-19,82,77,11,7,0
+PRJ028,Infrastructure Project 028,Ministry of Housing,Roads,Maharashtra,1451,1775,696.17,2023-04-25,2024-09-30,2024-09-04,52,37,10,4,2
+PRJ029,Infrastructure Project 029,Ministry of Power,Water,Madhya Pradesh,465,462,128.7,2024-03-25,2026-05-01,2026-04-15,77,71,21,16,5
+PRJ030,Infrastructure Project 030,Ministry of Jal Shakti,Housing,Maharashtra,1551,1770,952.23,2023-05-11,2024-11-06,2024-10-16,67,77,25,25,0
+PRJ031,Infrastructure Project 031,Ministry of Railways,Water,Bihar,1138,1534,609.83,2024-01-04,2026-03-21,2026-10-31,59,27,20,14,4
+PRJ032,Infrastructure Project 032,Ministry of Power,Railways,Maharashtra,1807,1742,814.67,2023-07-27,2026-06-22,2026-06-16,40,31,21,20,1
+PRJ033,Infrastructure Project 033,Ministry of Railways,Power,Maharashtra,1459,1532,707.08,2023-05-26,2026-03-18,2026-04-29,80,51,15,15,0
+PRJ034,Infrastructure Project 034,Ministry of Power,Railways,Rajasthan,1914,1901,739.0,2023-08-22,2026-03-03,2026-04-04,80,54,20,17,3
+PRJ035,Infrastructure Project 035,Ministry of Housing,Power,Karnataka,1051,1013,446.09,2024-02-16,2026-12-12,2026-11-25,43,18,11,8,1
+PRJ036,Infrastructure Project 036,Ministry of Housing,Power,Maharashtra,1013,1185,572.39,2024-03-01,2027-01-26,2027-01-06,50,30,15,15,0
+PRJ037,Infrastructure Project 037,Ministry of Railways,Roads,Karnataka,580,991,274.8,2024-01-01,2026-03-03,2026-06-19,57,46,25,16,2
+PRJ038,Infrastructure Project 038,Ministry of Jal Shakti,Power,Tamil Nadu,1211,1652,355.53,2023-07-28,2025-11-12,2025-10-15,69,53,21,17,4
+PRJ039,Infrastructure Project 039,Ministry of Power,Railways,Bihar,711,697,602.51,2023-01-04,2025-05-13,2025-04-15,88,74,21,19,2
+PRJ040,Infrastructure Project 040,Ministry of Power,Water,Uttar Pradesh,159,159,114.2,2023-08-12,2026-05-05,2026-04-18,64,53,20,12,7
+PRJ041,Infrastructure Project 041,Ministry of Power,Housing,Maharashtra,977,1169,368.53,2023-02-12,2026-04-15,2026-11-25,48,29,16,12,2
+PRJ042,Infrastructure Project 042,Ministry of Railways,Railways,Uttar Pradesh,1634,1631,1552.19,2023-08-29,2025-01-29,2025-01-05,74,81,19,12,1
+PRJ043,Infrastructure Project 043,Ministry of Road Transport,Railways,Bihar,588,1020,422.55,2023-11-15,2025-09-01,2025-08-13,48,28,14,11,2
+PRJ044,Infrastructure Project 044,Ministry of Housing,Water,Maharashtra,152,151,110.07,2023-02-25,2026-02-21,2026-07-25,59,33,20,16,1
+PRJ045,Infrastructure Project 045,Ministry of Power,Roads,Karnataka,1702,2173,1060.21,2024-02-12,2027-01-26,2027-01-13,42,30,19,10,8
+PRJ046,Infrastructure Project 046,Ministry of Power,Power,Karnataka,1401,1726,1043.91,2024-05-06,2026-09-23,2026-08-29,93,74,21,13,8
+PRJ047,Infrastructure Project 047,Ministry of Road Transport,Power,Gujarat,649,871,539.65,2024-02-27,2027-03-09,2027-10-19,60,55,10,4,3
+PRJ048,Infrastructure Project 048,Ministry of Power,Power,Madhya Pradesh,534,952,260.72,2023-04-04,2025-12-28,2025-12-21,62,56,16,14,0
+PRJ049,Infrastructure Project 049,Ministry of Power,Water,Gujarat,1422,1375,801.61,2023-12-20,2026-09-02,2027-03-07,85,64,8,1,4
+PRJ050,Infrastructure Project 050,Ministry of Jal Shakti,Railways,Madhya Pradesh,777,1207,441.04,2023-08-06,2026-07-04,2026-10-03,62,28,17,11,1
+PRJ051,Infrastructure Project 051,Ministry of Housing,Railways,Bihar,666,652,621.79,2023-04-21,2026-01-10,2026-01-01,86,59,24,23,1
+PRJ052,Infrastructure Project 052,Ministry of Road Transport,Roads,Bihar,359,344,334.59,2023-01-08,2025-11-19,2025-10-26,57,65,25,19,5
+PRJ053,Infrastructure Project 053,Ministry of Road Transport,Railways,Rajasthan,1002,1347,927.7,2023-08-29,2026-05-15,2026-05-13,61,60,16,13,0
+PRJ054,Infrastructure Project 054,Ministry of Housing,Water,Karnataka,722,694,240.37,2024-02-20,2027-01-31,2027-01-02,45,40,21,20,0
+PRJ055,Infrastructure Project 055,Ministry of Jal Shakti,Roads,Rajasthan,1371,1509,1264.17,2023-06-06,2026-05-23,2026-10-22,43,14,11,4,3
+PRJ056,Infrastructure Project 056,Ministry of Railways,Housing,Madhya Pradesh,1022,1018,591.68,2023-01-02,2025-07-08,2025-06-24,84,56,9,3,2
+PRJ057,Infrastructure Project 057,Ministry of Road Transport,Power,Bihar,1215,1187,430.47,2023-08-06,2025-04-14,2025-10-08,54,23,16,8,1
+PRJ058,Infrastructure Project 058,Ministry of Road Transport,Roads,Madhya Pradesh,657,641,391.35,2023-12-25,2026-06-24,2026-06-05,72,48,10,9,0
+PRJ059,Infrastructure Project 059,Ministry of Power,Housing,Rajasthan,1812,1746,1197.71,2024-05-07,2027-08-10,2028-05-06,95,69,8,4,4
+PRJ060,Infrastructure Project 060,Ministry of Power,Power,Bihar,1400,1618,1299.67,2023-10-27,2026-05-30,2026-09-19,92,71,23,18,3
+PRJ061,Infrastructure Project 061,Ministry of Road Transport,Water,Tamil Nadu,1766,1701,486.86,2023-12-06,2026-06-03,2027-01-25,88,63,10,5,2
+PRJ062,Infrastructure Project 062,Ministry of Housing,Power,Tamil Nadu,484,601,331.95,2023-07-31,2025-02-05,2025-01-19,73,60,23,23,0
+PRJ063,Infrastructure Project 063,Ministry of Power,Roads,Rajasthan,1390,1498,1038.12,2023-03-04,2024-08-14,2024-07-19,78,73,17,15,0
+PRJ064,Infrastructure Project 064,Ministry of Jal Shakti,Railways,Maharashtra,1142,1498,617.64,2023-09-13,2025-11-19,2025-11-13,85,78,23,20,1
+PRJ065,Infrastructure Project 065,Ministry of Railways,Power,Tamil Nadu,796,765,347.87,2023-05-22,2025-12-01,2025-11-10,90,68,8,4,2
+PRJ066,Infrastructure Project 066,Ministry of Housing,Power,Karnataka,1230,1302,632.28,2023-06-26,2025-10-13,2026-06-10,88,64,18,11,3
+PRJ067,Infrastructure Project 067,Ministry of Power,Roads,Tamil Nadu,1722,2219,1612.78,2023-07-17,2026-10-08,2026-12-28,92,61,23,13,2
+PRJ068,Infrastructure Project 068,Ministry of Housing,Water,Karnataka,939,1425,872.3,2023-01-08,2024-10-16,2024-12-26,95,64,10,7,2
+PRJ069,Infrastructure Project 069,Ministry of Road Transport,Power,Maharashtra,1383,1549,1190.3,2024-05-03,2026-08-05,2027-01-29,85,64,9,9,0
+PRJ070,Infrastructure Project 070,Ministry of Power,Railways,Madhya Pradesh,1541,1782,863.85,2024-01-25,2027-03-18,2027-03-07,95,99,17,7,0
+PRJ071,Infrastructure Project 071,Ministry of Railways,Railways,Tamil Nadu,1259,1607,464.56,2023-09-29,2026-04-07,2026-03-09,83,82,10,9,1
+PRJ072,Infrastructure Project 072,Ministry of Housing,Power,Bihar,1041,1391,267.1,2023-11-23,2025-12-22,2026-07-16,56,24,22,16,5
+PRJ073,Infrastructure Project 073,Ministry of Power,Housing,Uttar Pradesh,507,507,164.6,2023-08-22,2025-11-08,2025-10-30,64,44,20,19,1
+PRJ074,Infrastructure Project 074,Ministry of Railways,Roads,Uttar Pradesh,1964,2361,1635.99,2023-10-17,2025-04-19,2025-09-24,78,57,17,10,5
+PRJ075,Infrastructure Project 075,Ministry of Jal Shakti,Housing,Bihar,168,620,128.13,2023-06-08,2026-01-14,2026-01-10,77,64,10,4,2
+PRJ076,Infrastructure Project 076,Ministry of Power,Water,Gujarat,626,1116,580.41,2024-03-01,2025-12-29,2026-05-23,92,72,17,12,0
+PRJ077,Infrastructure Project 077,Ministry of Road Transport,Railways,Tamil Nadu,128,126,43.07,2023-02-16,2025-08-08,2025-07-09,56,32,19,19,0
+PRJ078,Infrastructure Project 078,Ministry of Power,Roads,Rajasthan,1910,2114,1701.2,2023-01-13,2026-02-20,2026-01-29,75,65,15,15,0
+PRJ079,Infrastructure Project 079,Ministry of Power,Water,Rajasthan,723,689,229.94,2023-01-24,2024-07-15,2024-06-22,71,74,25,17,6
+PRJ080,Infrastructure Project 080,Ministry of Housing,Roads,Gujarat,1441,1928,981.26,2024-03-29,2026-10-09,2027-03-08,46,25,16,6,5
+PRJ081,Infrastructure Project 081,Ministry of Road Transport,Housing,Madhya Pradesh,834,833,369.56,2023-10-06,2026-12-09,2026-11-20,43,28,11,8,0
+PRJ082,Infrastructure Project 082,Ministry of Housing,Railways,Rajasthan,520,520,205.41,2023-03-06,2026-02-16,2026-01-28,44,19,14,7,5
+PRJ083,Infrastructure Project 083,Ministry of Road Transport,Railways,Bihar,1735,1694,1236.6,2023-10-04,2025-10-29,2025-10-11,51,54,8,2,0
+PRJ084,Infrastructure Project 084,Ministry of Jal Shakti,Railways,Uttar Pradesh,1619,1562,533.55,2023-01-27,2024-10-17,2024-10-14,66,43,10,7,3
+PRJ085,Infrastructure Project 085,Ministry of Power,Roads,Maharashtra,1167,1468,817.3,2024-01-08,2027-03-27,2027-03-24,59,40,8,0,7
+PRJ086,Infrastructure Project 086,Ministry of Jal Shakti,Power,Maharashtra,403,387,178.33,2023-06-14,2026-07-10,2026-06-26,44,46,25,20,3
+PRJ087,Infrastructure Project 087,Ministry of Power,Power,Karnataka,1846,2319,1595.67,2024-02-11,2025-10-20,2026-05-11,81,50,25,18,6
+PRJ088,Infrastructure Project 088,Ministry of Road Transport,Housing,Rajasthan,740,713,529.53,2024-01-09,2025-08-28,2025-11-13,67,57,19,11,7
+PRJ089,Infrastructure Project 089,Ministry of Housing,Water,Bihar,1301,1295,625.46,2023-10-12,2025-04-25,2025-04-12,75,50,11,7,2
+PRJ090,Infrastructure Project 090,Ministry of Jal Shakti,Railways,Karnataka,1283,1248,459.71,2023-06-30,2025-02-25,2025-02-22,72,69,23,16,1
+PRJ091,Infrastructure Project 091,Ministry of Railways,Housing,Bihar,1671,1668,1135.45,2024-03-08,2027-02-15,2027-02-07,92,63,25,15,9
+PRJ092,Infrastructure Project 092,Ministry of Railways,Power,Karnataka,818,785,702.58,2024-04-16,2026-08-11,2026-08-09,40,39,20,11,2
+PRJ093,Infrastructure Project 093,Ministry of Power,Power,Tamil Nadu,422,414,318.66,2023-08-21,2025-12-17,2026-02-26,63,54,10,0,2
+PRJ094,Infrastructure Project 094,Ministry of Housing,Roads,Madhya Pradesh,948,915,737.98,2023-11-07,2026-06-16,2027-03-22,57,54,11,6,3
+PRJ095,Infrastructure Project 095,Ministry of Power,Railways,Rajasthan,212,644,97.73,2023-07-22,2026-08-08,2027-05-19,40,37,14,6,4
+PRJ096,Infrastructure Project 096,Ministry of Road Transport,Housing,Karnataka,1541,1826,987.95,2023-07-14,2026-05-24,2026-05-24,54,32,19,10,6
+PRJ097,Infrastructure Project 097,Ministry of Road Transport,Power,Maharashtra,1553,1507,702.98,2023-10-21,2026-04-22,2027-01-12,80,64,20,10,5
+PRJ098,Infrastructure Project 098,Ministry of Road Transport,Water,Madhya Pradesh,1306,1680,398.4,2023-05-05,2025-12-06,2026-09-23,65,42,17,12,1
+PRJ099,Infrastructure Project 099,Ministry of Road Transport,Railways,Tamil Nadu,819,1258,672.01,2024-04-08,2026-08-13,2026-11-29,86,55,15,6,2
+PRJ100,Infrastructure Project 100,Ministry of Housing,Housing,Uttar Pradesh,1656,2029,1203.57,2023-08-26,2026-08-07,2027-04-20,77,59,18,18,0

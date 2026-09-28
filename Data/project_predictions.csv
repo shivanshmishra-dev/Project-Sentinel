@@ -1,0 +1,101 @@
+project_id,project_name,ministry,sector,state,time_overrun_probability,cost_overrun_probability,overall_prediction_risk
+PRJ001,Infrastructure Project 001,Ministry of Railways,Railways,Uttar Pradesh,73.0,83.5,78.25
+PRJ002,Infrastructure Project 002,Ministry of Power,Housing,Bihar,20.5,85.0,52.75
+PRJ003,Infrastructure Project 003,Ministry of Jal Shakti,Roads,Karnataka,26.0,11.5,18.75
+PRJ004,Infrastructure Project 004,Ministry of Housing,Roads,Madhya Pradesh,19.5,83.5,51.5
+PRJ005,Infrastructure Project 005,Ministry of Railways,Water,Madhya Pradesh,56.0,17.5,36.75
+PRJ006,Infrastructure Project 006,Ministry of Housing,Power,Bihar,17.0,30.0,23.5
+PRJ007,Infrastructure Project 007,Ministry of Jal Shakti,Power,Karnataka,88.5,87.5,88.0
+PRJ008,Infrastructure Project 008,Ministry of Road Transport,Power,Karnataka,20.0,9.5,14.75
+PRJ009,Infrastructure Project 009,Ministry of Railways,Power,Uttar Pradesh,18.0,91.5,54.75
+PRJ010,Infrastructure Project 010,Ministry of Housing,Railways,Uttar Pradesh,12.5,27.0,19.75
+PRJ011,Infrastructure Project 011,Ministry of Power,Roads,Rajasthan,32.0,28.0,30.0
+PRJ012,Infrastructure Project 012,Ministry of Housing,Power,Tamil Nadu,18.5,19.0,18.75
+PRJ013,Infrastructure Project 013,Ministry of Road Transport,Roads,Gujarat,76.0,38.0,57.0
+PRJ014,Infrastructure Project 014,Ministry of Road Transport,Roads,Karnataka,61.0,85.0,73.0
+PRJ015,Infrastructure Project 015,Ministry of Railways,Railways,Tamil Nadu,21.0,9.0,15.0
+PRJ016,Infrastructure Project 016,Ministry of Railways,Railways,Karnataka,25.0,7.5,16.25
+PRJ017,Infrastructure Project 017,Ministry of Power,Housing,Karnataka,12.5,64.5,38.5
+PRJ018,Infrastructure Project 018,Ministry of Road Transport,Roads,Tamil Nadu,55.0,74.5,64.75
+PRJ019,Infrastructure Project 019,Ministry of Jal Shakti,Railways,Uttar Pradesh,50.5,15.5,33.0
+PRJ020,Infrastructure Project 020,Ministry of Railways,Housing,Tamil Nadu,22.5,63.5,43.0
+PRJ021,Infrastructure Project 021,Ministry of Railways,Housing,Bihar,78.5,46.5,62.5
+PRJ022,Infrastructure Project 022,Ministry of Railways,Housing,Maharashtra,82.5,89.5,86.0
+PRJ023,Infrastructure Project 023,Ministry of Housing,Roads,Maharashtra,3.5,22.5,13.0
+PRJ024,Infrastructure Project 024,Ministry of Road Transport,Roads,Maharashtra,75.0,20.5,47.75
+PRJ025,Infrastructure Project 025,Ministry of Railways,Railways,Maharashtra,69.0,83.5,76.25
+PRJ026,Infrastructure Project 026,Ministry of Road Transport,Railways,Gujarat,17.5,50.5,34.0
+PRJ027,Infrastructure Project 027,Ministry of Housing,Housing,Madhya Pradesh,20.0,73.5,46.75
+PRJ028,Infrastructure Project 028,Ministry of Housing,Roads,Maharashtra,15.5,80.5,48.0
+PRJ029,Infrastructure Project 029,Ministry of Power,Water,Madhya Pradesh,11.5,13.0,12.25
+PRJ030,Infrastructure Project 030,Ministry of Jal Shakti,Housing,Maharashtra,7.0,62.5,34.75
+PRJ031,Infrastructure Project 031,Ministry of Railways,Water,Bihar,80.0,87.0,83.5
+PRJ032,Infrastructure Project 032,Ministry of Power,Railways,Maharashtra,54.5,25.0,39.75
+PRJ033,Infrastructure Project 033,Ministry of Railways,Power,Maharashtra,29.5,85.0,57.25
+PRJ034,Infrastructure Project 034,Ministry of Power,Railways,Rajasthan,92.5,31.5,62.0
+PRJ035,Infrastructure Project 035,Ministry of Housing,Power,Karnataka,18.5,37.5,28.0
+PRJ036,Infrastructure Project 036,Ministry of Housing,Power,Maharashtra,20.0,80.5,50.25
+PRJ037,Infrastructure Project 037,Ministry of Railways,Roads,Karnataka,76.0,75.5,75.75
+PRJ038,Infrastructure Project 038,Ministry of Jal Shakti,Power,Tamil Nadu,16.0,82.5,49.25
+PRJ039,Infrastructure Project 039,Ministry of Power,Railways,Bihar,15.5,16.0,15.75
+PRJ040,Infrastructure Project 040,Ministry of Power,Water,Uttar Pradesh,22.0,38.0,30.0
+PRJ041,Infrastructure Project 041,Ministry of Power,Housing,Maharashtra,41.0,70.5,55.75
+PRJ042,Infrastructure Project 042,Ministry of Railways,Railways,Uttar Pradesh,8.5,27.0,17.75
+PRJ043,Infrastructure Project 043,Ministry of Road Transport,Railways,Bihar,17.5,80.0,48.75
+PRJ044,Infrastructure Project 044,Ministry of Housing,Water,Maharashtra,73.5,34.5,54.0
+PRJ045,Infrastructure Project 045,Ministry of Power,Roads,Karnataka,22.5,88.0,55.25
+PRJ046,Infrastructure Project 046,Ministry of Power,Power,Karnataka,16.5,87.5,52.0
+PRJ047,Infrastructure Project 047,Ministry of Road Transport,Power,Gujarat,83.0,64.0,73.5
+PRJ048,Infrastructure Project 048,Ministry of Power,Power,Madhya Pradesh,32.5,83.5,58.0
+PRJ049,Infrastructure Project 049,Ministry of Power,Water,Gujarat,80.0,28.0,54.0
+PRJ050,Infrastructure Project 050,Ministry of Jal Shakti,Railways,Madhya Pradesh,78.0,59.5,68.75
+PRJ051,Infrastructure Project 051,Ministry of Housing,Railways,Bihar,10.5,25.5,18.0
+PRJ052,Infrastructure Project 052,Ministry of Road Transport,Roads,Bihar,15.0,13.5,14.25
+PRJ053,Infrastructure Project 053,Ministry of Road Transport,Railways,Rajasthan,15.5,84.5,50.0
+PRJ054,Infrastructure Project 054,Ministry of Housing,Water,Karnataka,10.5,9.5,10.0
+PRJ055,Infrastructure Project 055,Ministry of Jal Shakti,Roads,Rajasthan,79.5,73.5,76.5
+PRJ056,Infrastructure Project 056,Ministry of Railways,Housing,Madhya Pradesh,21.5,22.0,21.75
+PRJ057,Infrastructure Project 057,Ministry of Road Transport,Power,Bihar,81.5,80.5,81.0
+PRJ058,Infrastructure Project 058,Ministry of Road Transport,Roads,Madhya Pradesh,8.5,15.0,11.75
+PRJ059,Infrastructure Project 059,Ministry of Power,Housing,Rajasthan,82.5,24.0,53.25
+PRJ060,Infrastructure Project 060,Ministry of Power,Power,Bihar,72.5,87.5,80.0
+PRJ061,Infrastructure Project 061,Ministry of Road Transport,Water,Tamil Nadu,84.5,10.0,47.25
+PRJ062,Infrastructure Project 062,Ministry of Housing,Power,Tamil Nadu,4.0,72.0,38.0
+PRJ063,Infrastructure Project 063,Ministry of Power,Roads,Rajasthan,12.5,97.0,54.75
+PRJ064,Infrastructure Project 064,Ministry of Jal Shakti,Railways,Maharashtra,1.5,72.5,37.0
+PRJ065,Infrastructure Project 065,Ministry of Railways,Power,Tamil Nadu,58.0,12.5,35.25
+PRJ066,Infrastructure Project 066,Ministry of Housing,Power,Karnataka,87.0,86.5,86.75
+PRJ067,Infrastructure Project 067,Ministry of Power,Roads,Tamil Nadu,80.0,85.5,82.75
+PRJ068,Infrastructure Project 068,Ministry of Housing,Water,Karnataka,82.5,55.5,69.0
+PRJ069,Infrastructure Project 069,Ministry of Road Transport,Power,Maharashtra,82.0,86.5,84.25
+PRJ070,Infrastructure Project 070,Ministry of Power,Railways,Madhya Pradesh,9.5,84.0,46.75
+PRJ071,Infrastructure Project 071,Ministry of Railways,Railways,Tamil Nadu,5.0,77.0,41.0
+PRJ072,Infrastructure Project 072,Ministry of Housing,Power,Bihar,78.5,83.5,81.0
+PRJ073,Infrastructure Project 073,Ministry of Power,Housing,Uttar Pradesh,16.0,14.0,15.0
+PRJ074,Infrastructure Project 074,Ministry of Railways,Roads,Uttar Pradesh,92.5,93.0,92.75
+PRJ075,Infrastructure Project 075,Ministry of Jal Shakti,Housing,Bihar,51.0,72.0,61.5
+PRJ076,Infrastructure Project 076,Ministry of Power,Water,Gujarat,68.5,84.5,76.5
+PRJ077,Infrastructure Project 077,Ministry of Road Transport,Railways,Tamil Nadu,20.5,15.0,17.75
+PRJ078,Infrastructure Project 078,Ministry of Power,Roads,Rajasthan,23.5,88.5,56.0
+PRJ079,Infrastructure Project 079,Ministry of Power,Water,Rajasthan,9.0,13.0,11.0
+PRJ080,Infrastructure Project 080,Ministry of Housing,Roads,Gujarat,80.0,80.5,80.25
+PRJ081,Infrastructure Project 081,Ministry of Road Transport,Housing,Madhya Pradesh,8.5,14.5,11.5
+PRJ082,Infrastructure Project 082,Ministry of Housing,Railways,Rajasthan,24.5,20.5,22.5
+PRJ083,Infrastructure Project 083,Ministry of Road Transport,Railways,Bihar,24.0,64.0,44.0
+PRJ084,Infrastructure Project 084,Ministry of Jal Shakti,Railways,Uttar Pradesh,27.5,23.5,25.5
+PRJ085,Infrastructure Project 085,Ministry of Power,Roads,Maharashtra,16.0,81.5,48.75
+PRJ086,Infrastructure Project 086,Ministry of Jal Shakti,Power,Maharashtra,42.5,9.5,26.0
+PRJ087,Infrastructure Project 087,Ministry of Power,Power,Karnataka,69.5,89.5,79.5
+PRJ088,Infrastructure Project 088,Ministry of Road Transport,Housing,Rajasthan,37.5,16.0,26.75
+PRJ089,Infrastructure Project 089,Ministry of Housing,Water,Bihar,15.5,54.0,34.75
+PRJ090,Infrastructure Project 090,Ministry of Jal Shakti,Railways,Karnataka,12.0,27.0,19.5
+PRJ091,Infrastructure Project 091,Ministry of Railways,Housing,Bihar,26.0,33.5,29.75
+PRJ092,Infrastructure Project 092,Ministry of Railways,Power,Karnataka,24.0,8.5,16.25
+PRJ093,Infrastructure Project 093,Ministry of Power,Power,Tamil Nadu,74.0,9.0,41.5
+PRJ094,Infrastructure Project 094,Ministry of Housing,Roads,Madhya Pradesh,81.5,20.0,50.75
+PRJ095,Infrastructure Project 095,Ministry of Power,Railways,Rajasthan,78.5,70.0,74.25
+PRJ096,Infrastructure Project 096,Ministry of Road Transport,Housing,Karnataka,45.0,91.5,68.25
+PRJ097,Infrastructure Project 097,Ministry of Road Transport,Power,Maharashtra,78.0,49.0,63.5
+PRJ098,Infrastructure Project 098,Ministry of Road Transport,Water,Madhya Pradesh,75.0,83.0,79.0
+PRJ099,Infrastructure Project 099,Ministry of Road Transport,Railways,Tamil Nadu,82.5,79.0,80.75
+PRJ100,Infrastructure Project 100,Ministry of Housing,Housing,Uttar Pradesh,67.5,90.5,79.0

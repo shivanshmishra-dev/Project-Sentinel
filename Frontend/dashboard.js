@@ -1,4 +1,4 @@
-const csvUrl = "../data/project_sentinel_final.csv?v=6";
+const csvUrl = "Data/project_sentinel_final.csv?v=6";
 
 
 function getPredictionRiskLevel(project) {

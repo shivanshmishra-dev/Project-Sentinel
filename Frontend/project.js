@@ -4,7 +4,7 @@
 // ==================================================
 
 const csvUrl =
-    "../data/project_sentinel_final.csv?v=8";
+    "Data/project_sentinel_final.csv?v=8";
 
 
 // ==================================================
@@ -1728,7 +1728,7 @@ async function loadProgressChart(
 
         const response =
             await fetch(
-                "../data/progress_history.csv?v=4"
+                "Data/progress_history.csv?v=4"
             );
 
 
